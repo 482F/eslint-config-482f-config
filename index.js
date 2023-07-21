@@ -143,4 +143,14 @@ export default [
       '@typescript-eslint/space-before-function-paren': 'off',
     },
   },
+  {
+    // テストに関しては下記のルールを無効化
+    files: ['**/*.test.js', '**/*.test.ts'],
+    rules: {
+      'eslint-comments/disable-enable-pair': 'off',
+      '@typescript-eslint/no-magic-numbers': 'off',
+      'id-length': 'off',
+      'unicorn/consistent-function-scoping': 'off',
+    },
+  },
 ]
