@@ -138,6 +138,16 @@ export default [
       // null の使用を許可
       'unicorn/no-null': 'off',
 
+      // 関数のステートメント数の上限無し
+      'max-statements': 'off',
+
+      // ヨーダ記法は許可
+      // 本当は数値比較の大なり小なりのときのみ許可したいがそのようなオプションがない
+      'yoda': 'off',
+
+      // 認知的複雑度は上限なし
+      'sonarjs/cognitive-complexity': 'off',
+
       // 下記は prettier に任せる
       // 関数の括弧の周りのスペースはどのような形でも OK
       '@typescript-eslint/space-before-function-paren': 'off',
