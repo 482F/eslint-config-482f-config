@@ -61,9 +61,6 @@ export default [
       // ブロックの中身の最初/最後の行の空行禁止
       'padded-blocks': ['error', 'never'],
 
-      // 関数名と引数の括弧の間の空白禁止
-      '@typescript-eslint/space-before-function-paren': ['error', 'never'],
-
       // new Promise の第一引数の関数で値を返すことを許可
       // アロー関数を使ってもエラーに引っかからないように
       'no-promise-executor-return': 'off',
