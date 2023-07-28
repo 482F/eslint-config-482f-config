@@ -26,6 +26,7 @@ export default [
     'prettier'
   ),
   {
+    files: ['**/*.js', '**/*.ts'],
     rules: {
       // セミコロン無し
       '@typescript-eslint/semi': 'off',
