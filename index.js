@@ -147,6 +147,10 @@ export default [
       // 認知的複雑度は上限なし
       'sonarjs/cognitive-complexity': 'off',
 
+      // Error クラス以外の throw を許可
+      // 何故か Readonly<Error> が throw できないので仕方なく
+      '@typescript-eslint/no-throw-literal': 'off',
+
       // 下記は prettier に任せる
       // 関数の括弧の周りのスペースはどのような形でも OK
       '@typescript-eslint/space-before-function-paren': 'off',
