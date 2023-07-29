@@ -151,6 +151,12 @@ export default [
       // 何故か Readonly<Error> が throw できないので仕方なく
       '@typescript-eslint/no-throw-literal': 'off',
 
+      // 三項演算子の許可
+      'no-ternary': 'off',
+
+      // ネストした三項演算子は禁止
+      'no-nested-ternary': 'error',
+
       // 下記は prettier に任せる
       // 関数の括弧の周りのスペースはどのような形でも OK
       '@typescript-eslint/space-before-function-paren': 'off',
