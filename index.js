@@ -44,16 +44,9 @@ export default [
         },
       ],
 
-      // マジックナンバーの使用禁止
-      '@typescript-eslint/no-magic-numbers': [
-        'error',
-        {
-          // ただし、数値型、デフォルト値の定義、タイプのインデックスアクセスは許可
-          ignoreNumericLiteralTypes: true,
-          ignoreDefaultValues: true,
-          ignoreTypeIndexes: true,
-        },
-      ],
+      // マジックナンバーの使用許可
+      // str.at(-1) とかができなくなるのは困るので一律許可。本当は `allowNums: [-1, 0, 1]` とかやりたいけど
+      '@typescript-eslint/no-magic-numbers': 'off',
 
       // 関数の定義について、関数式と関数宣言のどちらも許可
       'func-style': 'off',
@@ -160,6 +153,21 @@ export default [
       // 下記は prettier に任せる
       // 関数の括弧の周りのスペースはどのような形でも OK
       '@typescript-eslint/space-before-function-paren': 'off',
+
+      // 関数の返り値の型を明示しないことを許可
+      '@typescript-eslint/explicit-function-return-type': 'off',
+
+      // Array.prototype.reduce を許可
+      'unicorn/no-array-reduce': 'off',
+
+      // 三項演算子を使える場面で強制する機能の無効化
+      'unicorn/prefer-ternary': 'off',
+
+      // `if (cond) return foo; else return bar` のような必要ない else を許可
+      'no-else-return': 'off',
+
+      // 非プリミティブかつ非 readonly な型の引数を許可
+      '@typescript-eslint/prefer-readonly-parameter-types': 'off',
     },
   },
   {
